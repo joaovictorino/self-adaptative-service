@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e15dbaaa-7f12-481c-9c8a-52a2b8359a26" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8000/Decisao?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Decisao.wsdl" MetadataType="Wsdl" ID="0a5abad0-96ac-4699-99d4-b4e9fd402dbb" SourceId="1" SourceUrl="http://localhost:8000/Decisao?wsdl=wsdl0" />
+    <MetadataFile FileName="Decisao.xsd" MetadataType="Schema" ID="c290d7aa-441c-40aa-8d10-a97bc1033d5e" SourceId="1" SourceUrl="http://localhost:8000/Decisao?xsd=xsd0" />
+    <MetadataFile FileName="AnalisarDados.wsdl" MetadataType="Wsdl" ID="39f9c0d5-287f-41f2-a99e-74dc9ba064af" SourceId="1" SourceUrl="http://localhost:8000/Decisao?wsdl" />
+    <MetadataFile FileName="Decisao1.xsd" MetadataType="Schema" ID="d005967d-f899-42df-a926-6f5f02f651f9" SourceId="1" SourceUrl="http://localhost:8000/Decisao?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

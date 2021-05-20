@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Negocio.DTOs" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Negocio.DTOs" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1234/Servico/ServicoExperimento.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DTO" />
+  <xs:complexType name="RequestInterpolador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dominio" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DTO" minOccurs="0" name="Execucao" nillable="true" type="q1:Execucao" />
+      <xs:element minOccurs="0" name="Senha" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestInterpolador" nillable="true" type="tns:RequestInterpolador" />
+  <xs:complexType name="ResponseInterpolador">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DTO" minOccurs="0" name="Pontos" nillable="true" type="q2:ArrayOfCurvaExecucaoPonto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseInterpolador" nillable="true" type="tns:ResponseInterpolador" />
+</xs:schema>

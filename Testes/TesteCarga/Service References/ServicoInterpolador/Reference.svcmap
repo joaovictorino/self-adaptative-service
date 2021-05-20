@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="39e6155a-36d4-48f5-a7d0-6e7efc4e955e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1234/Servico/ServicoExperimento.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServicoExperimento4.xsd" MetadataType="Schema" ID="63863313-b21e-4988-ab0f-e799e60cb94a" SourceId="1" SourceUrl="http://localhost:1234/Servico/ServicoExperimento.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServicoExperimento41.xsd" MetadataType="Schema" ID="c7dde216-d28f-493b-82c8-84aa22bb5330" SourceId="1" SourceUrl="http://localhost:1234/Servico/ServicoExperimento.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicoExperimento42.xsd" MetadataType="Schema" ID="e9e51dca-2ef9-49f9-91a7-6b85cbf6fd06" SourceId="1" SourceUrl="http://localhost:1234/Servico/ServicoExperimento.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicoExperimento43.xsd" MetadataType="Schema" ID="15b980aa-e0ca-4884-8982-1dd620fedd2b" SourceId="1" SourceUrl="http://localhost:1234/Servico/ServicoExperimento.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServicoExperimento1.disco" MetadataType="Disco" ID="6941d359-49b4-4b26-aed8-75f91452ef98" SourceId="1" SourceUrl="http://localhost:1234/Servico/ServicoExperimento.svc?disco" />
+    <MetadataFile FileName="FacadeServico1.wsdl" MetadataType="Wsdl" ID="bf5e1012-fb83-41a2-9203-61f3f5819afd" SourceId="1" SourceUrl="http://localhost:1234/Servico/ServicoExperimento.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

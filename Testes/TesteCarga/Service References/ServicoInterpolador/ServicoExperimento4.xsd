@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1234/Servico/ServicoExperimento.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Execucao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AnosExtensao" type="xs:int" />
+      <xs:element minOccurs="0" name="Antepolacao" type="tns:TipoInterpolacao" />
+      <xs:element minOccurs="0" name="BaseDias" type="tns:TipoBaseDias" />
+      <xs:element minOccurs="0" name="DataBase" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DataHoraExecucaoCurva" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Extrapolacao" type="tns:TipoInterpolacao" />
+      <xs:element minOccurs="0" name="Interpolacao" type="tns:TipoInterpolacao" />
+      <xs:element minOccurs="0" name="NomeCurva" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pontos" nillable="true" type="tns:ArrayOfCurvaExecucaoPonto" />
+      <xs:element minOccurs="0" name="Vertice" type="tns:TipoVertice" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Execucao" nillable="true" type="tns:Execucao" />
+  <xs:simpleType name="TipoInterpolacao">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EXPONENCIAL">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LINEAR">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TipoInterpolacao" nillable="true" type="tns:TipoInterpolacao" />
+  <xs:simpleType name="TipoBaseDias">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BASE252">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">252</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BASE360">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">360</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BASE30">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">30</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TipoBaseDias" nillable="true" type="tns:TipoBaseDias" />
+  <xs:complexType name="ArrayOfCurvaExecucaoPonto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CurvaExecucaoPonto" nillable="true" type="tns:CurvaExecucaoPonto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCurvaExecucaoPonto" nillable="true" type="tns:ArrayOfCurvaExecucaoPonto" />
+  <xs:complexType name="CurvaExecucaoPonto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataVencimento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DurationDiasCorridos" type="xs:double" />
+      <xs:element minOccurs="0" name="DurationDiasUteis" type="xs:double" />
+      <xs:element minOccurs="0" name="IndicadorVertice" type="xs:int" />
+      <xs:element minOccurs="0" name="QuantidadeDiasCorridos" type="xs:int" />
+      <xs:element minOccurs="0" name="QuantidadeDiasUteis" type="xs:int" />
+      <xs:element minOccurs="0" name="ValorVertice" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CurvaExecucaoPonto" nillable="true" type="tns:CurvaExecucaoPonto" />
+  <xs:simpleType name="TipoVertice">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FATOR_DIARIO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PU">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="TAXA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TipoVertice" nillable="true" type="tns:TipoVertice" />
+</xs:schema>
